@@ -5,13 +5,14 @@ from brain_games.games.brain_even import brain_even
 from brain_games.games.brain_calc import brain_calc
 from brain_games.games.brain_gcd import brain_gcd
 from brain_games.games.brain_progression import brain_progression
+from brain_games.games.brain_prime import brain_prime
 
 
 def main():
     print("Welcome to the Brain Games!")
     user_name = welcome_user()
     game_id = int(input(
-        "Choose a game for playing: 1: even 2: calc 3: gcd 4: progression "))
+        "Choose a game for playing: 1: even 2: calc 3: gcd 4: progression 5: prime "))
     count_test = 0
     if count_test == 0 and game_id == 1:
         print("Answer 'yes' if the number is even, otherwise answer 'no'.")
@@ -21,6 +22,8 @@ def main():
         print("Find the greatest common divisor of given numbers.")
     elif count_test == 0 and game_id == 4:
         print("What number is missing in the progression?")
+    elif count_test == 0 and game_id == 5:
+        print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
     while count_test < 3:
         if game_id == 1:
@@ -31,6 +34,8 @@ def main():
             question, right_answer = brain_gcd()
         elif game_id == 4:
             question, right_answer = brain_progression()
+        elif game_id == 5:
+            question, right_answer = brain_prime()
 
         print(question)
         user_answer = input('Your answer:')
