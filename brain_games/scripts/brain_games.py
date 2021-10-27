@@ -11,8 +11,8 @@ from brain_games.games.brain_prime import brain_prime
 def main():
     print("Welcome to the Brain Games!")
     user_name = welcome_user()
-    game_id = int(input(
-        "Choose a game for playing: 1: even 2: calc 3: gcd 4: progression 5: prime "))
+    print("Choose a game for playing: 1: even 2: calc 3: gcd 4: progression 5: prime ")
+    game_id = int(input())
     count_test = 0
     if count_test == 0 and game_id == 1:
         print("Answer 'yes' if the number is even, otherwise answer 'no'.")
