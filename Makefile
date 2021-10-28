@@ -8,5 +8,12 @@ publish:
 	poetry publish --dry-run
 package-install:
 	python3 -m pip install --user dist/*.whl --force-reinstall
-make lint:
+lint:
 	poetry run flake8 brain_games
+reinstall:
+	rm -r dist
+	poetry build
+	python3 -m pip install --user dist/*.whl --force-reinstall
+asci:
+	clear
+	asciinema rec
