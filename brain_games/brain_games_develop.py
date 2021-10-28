@@ -35,7 +35,7 @@ def main_develop(game_id):
         elif game_id == 5:
             question, right_answer = brain_prime()
 
-        print(question)
+        print('Question:', question)
         user_answer = input('Your answer:')
 
         if str(right_answer) == str(user_answer).lower():
