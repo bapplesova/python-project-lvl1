@@ -9,31 +9,24 @@ from brain_games.games.brain_prime import brain_prime
 
 
 def main_develop(game_id):
+    task = ['Answer "yes" if the number is even, otherwise answer "no".',
+            'What is the result of the expression?',
+            'Find the greatest common divisor of given numbers.',
+            'What number is missing in the progression?',
+            'Answer "yes" if given number is prime. Otherwise answer "no".']
+    module = ['brain_even()', 'brain_calc()', 'brain_gcd()',
+              'brain_progression()', 'brain_prime()']
+
+    count_test = 0
+
     greeter()
     user_name = welcome_user()
-    count_test = 0
-    if count_test == 0 and game_id == 1:
-        print("Answer 'yes' if the number is even, otherwise answer 'no'.")
-    elif count_test == 0 and game_id == 2:
-        print("What is the result of the expression?")
-    elif count_test == 0 and game_id == 3:
-        print("Find the greatest common divisor of given numbers.")
-    elif count_test == 0 and game_id == 4:
-        print("What number is missing in the progression?")
-    elif count_test == 0 and game_id == 5:
-        print('Answer "yes" if given number is prime. Otherwise answer "no".')
+
+    if count_test == 0:
+        print(task[game_id - 1])
 
     while count_test < 3:
-        if game_id == 1:
-            question, right_answer = brain_even()
-        elif game_id == 2:
-            question, right_answer = brain_calc()
-        elif game_id == 3:
-            question, right_answer = brain_gcd()
-        elif game_id == 4:
-            question, right_answer = brain_progression()
-        elif game_id == 5:
-            question, right_answer = brain_prime()
+        question, right_answer = eval(module[game_id - 1])
 
         print('Question:', question)
         user_answer = input('Your answer: ')
@@ -49,5 +42,3 @@ def main_develop(game_id):
 
     if count_test == 3:
         print('Congratulations, ' + user_name + '!')
-
-    return None

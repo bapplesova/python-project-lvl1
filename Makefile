@@ -17,3 +17,5 @@ reinstall:
 asci:
 	clear
 	asciinema rec
+push:
+	git push git@github.com:bapplesova/python-project-lvl1.git
