@@ -4,16 +4,22 @@
 from random import randint
 
 
-def brain_progression():
-    first_num = randint(1, 99)
-    step = randint(1, 9)
-    num_ind = randint(1, 10)
+def brain_game():
+    first_number = 1
+    second_number = 99
+    max_step = 9
+    progression_length = 10
+
+    first_num = randint(first_number, second_number)
+    step = randint(first_number, max_step)
+    num_ind = randint(first_number, progression_length)
     progression = [first_num + step * i for i in range(10)]
     question = ''
-    for i in range(10):
+
+    for i in range(progression_length):
         if i == num_ind - 1:
             question += '.. '
-            result = progression[i]
+            result = str(progression[i])
         else:
             question += str(progression[i]) + ' '
     return question, result

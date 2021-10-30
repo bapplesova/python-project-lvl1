@@ -4,10 +4,13 @@
 from random import randint, choice
 
 
-def brain_calc():
-    num1 = randint(1, 99)
-    num2 = randint(1, 99)
+def brain_game():
+    first_number = 1
+    second_number = 99
+
+    num1 = randint(first_number, second_number)
+    num2 = randint(first_number, second_number)
     manipulation = choice(['+', '-', '*'])
     question = str(num1) + ' ' + str(manipulation) + ' ' + str(num2)
     right_answer = eval(question)
-    return question, right_answer
+    return question, str(right_answer)

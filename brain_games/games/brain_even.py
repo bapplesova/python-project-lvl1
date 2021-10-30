@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
-
 from random import randint
 
 
-def brain_even():
-    num = randint(1, 99)
-    question = 'Question: ' + str(num)
+def brain_game():
+    first_number = 1
+    second_number = 99
+    num = randint(first_number, second_number)
     if num % 2 == 0:
         right_answer = 'yes'
     else:
         right_answer = 'no'
-    return question, right_answer
+    return str(num), right_answer
