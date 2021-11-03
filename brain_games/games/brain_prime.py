@@ -3,13 +3,19 @@
 
 from random import randint
 
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-def brain_game():
-    first_number = 1
-    second_number = 99
 
-    num = randint(first_number, second_number)
+def get_right_answer(num):
     for i in range(2, num // 2 + 1):
         if num % i == 0:
-            return str(num), 'no'
-    return str(num), 'yes'
+            return 'no'
+    return 'yes'
+
+
+def generate_round():
+    min_possible_num = 1
+    max_possible_num = 99
+
+    num = randint(min_possible_num, max_possible_num)
+    return str(num), get_right_answer(num)

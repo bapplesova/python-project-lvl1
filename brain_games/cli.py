@@ -10,5 +10,6 @@ def welcome_user():
     return name
 
 
-def greeter():
-    print("Welcome to the Brain Games!")
+def ask(question):
+    print(question)
+    return input('Your answer: ')

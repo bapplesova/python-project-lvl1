@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-from brain_games.cli import welcome_user, greeter
+from brain_games.cli import welcome_user
 
 
 def main():
-    greeter()
+    print("Welcome to the Brain Games!")
     welcome_user()
 
 

@@ -1,11 +1,10 @@
 #!/usr/bin/env python
-from brain_games.brain_games_develop import main_develop
-from brain_games.games.brain_calc import brain_game
+from brain_games.brain_games_engine import main_engine
+from brain_games.games.brain_calc import generate_round
 
 
 def main():
-    description = 'What is the result of the expression?'
-    main_develop(brain_game, description)
+    main_engine(generate_round)
 
 
 if __name__ == '__main__':
