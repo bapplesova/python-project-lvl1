@@ -11,5 +11,5 @@ def welcome_user():
 
 
 def ask(question):
-    print(question)
+    print('Question:', question)
     return input('Your answer: ')
