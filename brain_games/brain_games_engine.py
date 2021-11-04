@@ -8,13 +8,9 @@ TOTAL_COUNT_ROUNDS = 3
 def main_engine(game):
     print("Welcome to the Brain Games!")
     user_name = welcome_user()
-
+    print(game.DESCRIPTION)
     for i in range(TOTAL_COUNT_ROUNDS):
-
-#        if i == 0:
-#            print(game.DESCRIPTION)
-
-        question, right_answer = game()
+        question, right_answer = game.generate_round()
         user_answer = ask(question)
 
         if right_answer == str(user_answer).lower():
