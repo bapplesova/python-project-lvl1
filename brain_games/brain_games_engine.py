@@ -5,7 +5,7 @@ from brain_games.cli import welcome_user, ask
 TOTAL_COUNT_ROUNDS = 3
 
 
-def main_engine(game):
+def run_engine(game):
     print("Welcome to the Brain Games!")
     user_name = welcome_user()
     print(game.DESCRIPTION)
